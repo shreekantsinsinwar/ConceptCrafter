@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Operating System Concept",
+    "academic": "Frequently, a guiding principle can be used throughout a project, such as the design of an operating system. Following this principle simplifies design decisions and keeps the system consistent and easy to understand. A key, time-tested guiding principle for protection is the principle of least privilege. It dictates that programs, users, and even systems be given just enough privileges to perform their tasks.\\n\\n\\nAn operating system following the principle of least privilege implements its features, programs, system calls, and data structures so that failure or compromise of a component does the minimum damage and allows the minimum damage to be done. The overflow of a buffer in a system daemon might cause the daemon process to fail, for example, but should not allow the execution of code from the daemon process\\u2019s stack that would enable a remote user to gain maximum privileges and access to the entire system (as happens too often today).",
+    "understanding": "The baisc technique of protection is \"principle of least privilege\".The motto is to provide access only as much is required for the job as possible and for as long as it is required.The practical usage can be seen in phone apps where-in now we get an option to provide access to resources to any app while it is running.\n\nIt basically exists on the fact that even if a program is exploiting the resources it still doesn't have the compelete access and therefore the damage can be containerized",
+    "question": "What is the basic premise of principle of least privilege.",
+    "tags": "Protection",
+    "timestamp": "2025-07-12T22:29:48.069357"
+  },
+  {
+    "title": "Operating System Concepts",
+    "academic": "Managing users with the principle of least privilege entails creating a separate account for each user, with just the privileges that the user needs. An operator who needs to mount tapes and back up files on the system has access to just those commands and files needed to accomplish the job. Some systems implement role-based access control (RBAC) to provide this functionality.",
+    "understanding": "RBAC is like a technique, where-in we provide access to roles and then programs are sorted into those roles. The privileges are assigned to roles and therefore the power lies with the roles.\n\nThis can be seen implemented on a larger scale where in Uber last year suffered a social engineering attack by a brilliant teenage hacker who got access to their PAM account!",
+    "question": "What is RBAC?",
+    "tags": "Protection",
+    "timestamp": "2025-07-12T22:31:05.464198"
+  },
+  {
+    "title": "Get Strong",
+    "academic": "Health is defined as all the body\\u2019s systems working in harmony.Fitness is the ability to be physically active or athletic.\\n\\nStrong muscles and bones significantly affect both health and fitness.",
+    "understanding": "One cane be fit becoming a GM chess but may not be fit enough for competing in 100m sprint.\n\nHealth is unrelated to this concept at all. A healthy person has a system in harmony. It is like middle path of Buddhas philosophy.",
+    "question": "What is the difference between health and fitness?",
+    "tags": "Health",
+    "timestamp": "2025-07-12T22:32:20.435249"
+  },
+  {
+    "title": "Political Science",
+    "academic": "n what relation do the Communists stand to the proletarians as a whole?The Communists do not form a separate party opposed to other working class parties.\n\nThey have no interests separate and apart from those of the proletariat as a whole.\nThey do not set up any sectarian principles of their own by which to shape and mould the proletarian movement.The Communists are distinguished from the other working class parties by this only:\n1. In the national struggles of the proletarians of the different countries, they point out and bring to the front the common interests of the entire proletariat, independently of all nationality. \n2. In the various stages of development which the struggle of the working class against the bourgeoisie has to pass through, they always and everywhere represent the interests of the movement as a whole.\n\nThe Communists, therefore, are on the one hand, practically, the most advanced and resolute section of the working class parties of every country, that section which pushes forward all others; on the other hand, theoretically, they have over the great mass of the proletariat the advantage of clearly understanding the line of march, the conditions, and the ultimate general results of the proletarian movement.",
+    "understanding": "Karl Marx has basically divided the world in BOURGEOIS AND PROLETARIANS.\nAnd the communists have no different idealogies then the ones in the favor or the Proletarians. How the differ from Proletarians is that \\n1. They think of issues on a global level and not locally\n2. They represent the interest of the movement at every stage.",
+    "question": "Who is a communist?",
+    "tags": "Communism",
+    "timestamp": "2025-07-12T22:35:29.269011"
+  }
+]

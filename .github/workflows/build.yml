@@ -33,9 +33,12 @@ jobs:
           path: dist/*.exe
 
   build-macos:
+    name: Build macOS (.dmg)
     runs-on: macos-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,19 +47,28 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          pip3 install -r requirements.txt
-          pip3 install pyinstaller
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
 
-      - name: Build macOS App
+      - name: Create .app and .dmg using pyinstaller
         run: |
-          pyinstaller --onefile --windowed ConceptCrafter.py
+          pyinstaller --windowed --onefile ConceptCrafter.py
+          mkdir -p dist_mac
+          mv dist/ConceptCrafter dist_mac/ConceptCrafter
+          hdiutil create dist_mac/ConceptCrafter.dmg -srcfolder dist_mac -ov -format UDZO
 
-      - name: Upload macOS Artifact
+      - name: Verify .dmg file exists
+        run: |
+          echo "Listing contents of dist_mac directory:"
+          ls -la dist_mac
+
+      - name: Upload macOS Artifact (.dmg)
         uses: actions/upload-artifact@v4
         with:
           name: ConceptCrafter-macOS
-          path: dist/*.dmg
+          path: dist_mac/ConceptCrafter.dmg
+
 
   build-linux:
     runs-on: ubuntu-latest
